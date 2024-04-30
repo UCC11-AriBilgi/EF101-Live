@@ -1,0 +1,15 @@
+﻿* Eğer bir Entity yapısını projemizde kullanmak istiyorsak öncelikle bazı NuGet paketlerini projeye dahil etmek gerekiyor;
+	- Microsoft.EntityFrameworkCore
+	- Microsoft.EntityFrameworkCore.Design
+	- Microsoft.EntityFrameworkCore.SqlServer
+	- Microsoft.EntityFrameworkCore.Tools
+
+* DbFirst yaklasımı:
+	Bir VT vardır ve bunu uygulamanın içine almak..
+
+	Öncelikle ConnectionString i appsettings.json dosyası içersine tanımlamak
+
+	VT tarafını projenin içine dahil edebilmek için NuGet Package Manager dan yardım alacağız.
+
+	Buraya bir komut yazılacak
+	PM> Scaffold-DbContext "Data Source=BASAE;Initial Catalog=Northwind;Integrated Security=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
