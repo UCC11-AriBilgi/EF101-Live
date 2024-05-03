@@ -34,6 +34,7 @@ namespace P01_DbFirst.Controllers
 
             var customer = await _context.Customers
                 .FirstOrDefaultAsync(m => m.CustomerId == id);
+
             if (customer == null)
             {
                 return NotFound();
