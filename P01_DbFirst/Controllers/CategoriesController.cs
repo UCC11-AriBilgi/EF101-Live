@@ -19,6 +19,7 @@ namespace P01_DbFirst.Controllers
         }
 
         // GET: Categories
+        // VT tarafındaki ilgili tabloyu bir liste haline getirip View tarafına gönderiyor.
         public async Task<IActionResult> Index()
         {
             return View(await _context.Categories.ToListAsync());
@@ -43,6 +44,7 @@ namespace P01_DbFirst.Controllers
         }
 
         // GET: Categories/Create
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
@@ -51,15 +53,19 @@ namespace P01_DbFirst.Controllers
         // POST: Categories/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost] // Html Attribute
         [ValidateAntiForgeryToken]
+        // Create View tarafından gelen fieldlar category isimli değişgene yükleniyor(Bind)
         public async Task<IActionResult> Create([Bind("CategoryId,CategoryName,Description,Picture")] Category category)
         {
+            // Gelen bilgiler benim modelimle uyumlu mu kontrolu
             if (ModelState.IsValid)
             {
-                _context.Add(category);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                _context.Add(category); // Bildiğimiz Insert işlemi gerçekleşiyor...category
+
+                await _context.SaveChangesAsync(); // gelen bilgileri db ye gönderiyor.
+
+                return RedirectToAction(nameof(Index)); // Index action a atlıyor.
             }
             return View(category);
         }
@@ -96,7 +102,7 @@ namespace P01_DbFirst.Controllers
             {
                 try
                 {
-                    _context.Update(category);
+                    _context.Update(category); // Update metodu ile güncelle
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
