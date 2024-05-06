@@ -13,3 +13,5 @@
 
 	Buraya bir komut yazılacak
 	PM> Scaffold-DbContext "Data Source=BASAE;Initial Catalog=Northwind;Integrated Security=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
