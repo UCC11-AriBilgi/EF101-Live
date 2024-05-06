@@ -18,6 +18,10 @@
 	diyerek çalıştırıyoruz.
 	Bu durumda DB tarafında görünümü görebiliyoruz ..kod olarak. Ama henüz db yi göremedik ...Nedeni
 
-	PM> update-database -verbose komutunu girmediğimiz için
+	PM> update-database -verbose komutunu girmediğimiz için. 
+
+	Komutu çalıştırdıktan sonra veritabanının oluştuğu görmekteyiz.
+
+  5. Şu an tablolar boş olarak oluştu. Bazen bunların içinin dummy(fake) veri ile doldurulmasını isteyebiliriz. Bunun için de NuGet tarafından bir paketi(Bogus) yüklemek gerekecektir.
 
 	
