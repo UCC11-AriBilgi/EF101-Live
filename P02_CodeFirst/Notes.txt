@@ -1,0 +1,11 @@
+﻿ CodeFirst yaklaşımında elimde herhangi bir VT yoksa kod tarafında da veritabanında bulunacak tablo yapıları oluşturulabilir ve bunlara bağlı olarak olmayan bir vertabanı CodeFirst yaklasımıyla SQLServer üzerinde yaratılabilir.
+
+  1. VT için gerekli NuGet paketlerinin dahil edilmesi.
+	. Microsoft.EntityFrameworkCore
+	. Microsoft.EntityFrameworkCore.SqlServer
+	. Microsoft.EntityFrameworkCore.Design
+	. Microsoft.EntityFrameworkCore.Tools
+
+  2. VT tarafında olması istediğimiz tablo yapılarının kod tarafında birer class'a karşılık geleceği şekilde Entity/Model lerin yaratılması
+
+	
