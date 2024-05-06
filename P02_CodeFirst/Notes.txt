@@ -6,6 +6,18 @@
 	. Microsoft.EntityFrameworkCore.Design
 	. Microsoft.EntityFrameworkCore.Tools
 
-  2. VT tarafında olması istediğimiz tablo yapılarının kod tarafında birer class'a karşılık geleceği şekilde Entity/Model lerin yaratılması
+  2. VT tarafında olması istediğimiz tablo yapılarının kod tarafında birer class'a karşılık geleceği şekilde Entity/Model lerin yaratılması ve varsa ilişkilendirme tanımlarını yapılması
+
+  3. VT tarafında veritabanı yaratılabilmesi için db nin gönünümünü nasıl bir yapı olacağını belirten bir sınıf tanımlaması yapmak gerekiyor. Bu da DbContext olarak isimlendiriliyor.
+
+  4. Yapılmış olunan tablo tasarımlarını DB tarafında "böyle olacak" diye projeye anlatabilmemiz için NugetPackage Manager dan bir komut girmemiz gerekiyor.(Migration işlemi olarak adlandırılıyor)
+	Bunun öncesinde appsettings.json içinde ConnectionString'in tanımlanmış olması lazım ve programın ilk giriş noktası olan Program.cs içinde bazı ayarlamaların da yapılması gerekiyor.
+
+	PM> add-migration Init
+	
+	diyerek çalıştırıyoruz.
+	Bu durumda DB tarafında görünümü görebiliyoruz ..kod olarak. Ama henüz db yi göremedik ...Nedeni
+
+	PM> update-database -verbose komutunu girmediğimiz için
 
 	

@@ -8,5 +8,9 @@
 
         public string SClassDescription { get; set; }
 
+        // Relation Definitions
+        public ICollection<Student> Students { get; set; }
+
+
     }
 }

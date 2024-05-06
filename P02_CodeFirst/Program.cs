@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using P02_CodeFirst.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Ýþlemler için database kýsmýný bildirmem gerekiyor. 
+builder.Services.AddDbContext<StudentDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
+
 
 var app = builder.Build();
 

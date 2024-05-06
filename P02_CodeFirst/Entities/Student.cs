@@ -15,6 +15,9 @@ namespace P02_CodeFirst.Entities
 
         public DateTime SDoB { get; set; } // date of birth
 
+        // Relations
+        public virtual SClass SClass { get; set; } // Öğrencinin bulunduğu sınıf
+
 
     }
 }

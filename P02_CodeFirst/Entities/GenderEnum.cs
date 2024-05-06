@@ -3,7 +3,7 @@
     //Bir liste yapısı şeklimdeki class tanımım. Ama farklı olarak enum(enumeration) yapısında
     public enum GenderEnum
     {
-        E=1,
+        E,
         K
     }
 }
