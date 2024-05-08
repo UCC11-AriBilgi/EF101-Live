@@ -16,6 +16,8 @@ namespace P02_CodeFirst.Entities
         public DateTime SDoB { get; set; } // date of birth
 
         // Relations
+        public int SClassId { get; set; }
+        [ForeignKey("SClassId")]
         public virtual SClass SClass { get; set; } // Öğrencinin bulunduğu sınıf
 
 

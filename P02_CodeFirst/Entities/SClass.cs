@@ -1,4 +1,6 @@
-﻿namespace P02_CodeFirst.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace P02_CodeFirst.Entities
 {
     public class SClass
     {

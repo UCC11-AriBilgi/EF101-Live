@@ -22,6 +22,10 @@
 
 	Komutu çalıştırdıktan sonra veritabanının oluştuğu görmekteyiz.
 
-  5. Şu an tablolar boş olarak oluştu. Bazen bunların içinin dummy(fake) veri ile doldurulmasını isteyebiliriz. Bunun için de NuGet tarafından bir paketi(Bogus) yüklemek gerekecektir.
+  5. Şu an tablolar boş olarak oluştu. Bazen bunların içinin dummy(fake) veri ile doldurulmasını isteyebiliriz. 
+
+  6. Bunun için programın ilk giriş noktası olan Program.cs class ı üzerinde belirterek örnek verileri yaratacak şekilde düzenleme.
+
+  7. Data dizini içine veri üretecek olan bir class ekleyelim (AppDbInitializer.cs)
 
 	
